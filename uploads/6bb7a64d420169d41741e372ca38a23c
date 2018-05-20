@@ -1,0 +1,11 @@
+Instance Name: AWS-MYSQL-1
+DB Name: ebdb
+Endpoint
+aws-mysql-1.cjw2nbyjp3l7.eu-west-2.rds.amazonaws.com
+Port
+3306
+Username: ROOT
+Password: FTSE-SupportEyJ3px
+security group: default(sg-15dc2b7e)
+Engine
+MySQL 5.6.39

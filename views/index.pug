@@ -1,0 +1,12 @@
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action='/logIn', method="post")
+   label Username:
+   input(type='text', name="name_field", value='')
+   //br
+   //label Password:
+   //input(type='text', name="password", value='')
+   br
+   button Log In
+   //(formaction="")

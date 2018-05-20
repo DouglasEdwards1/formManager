@@ -1,0 +1,36 @@
+mysql
+ROOT
+Lewisham123
+
+mysql -u root -p
+
+mysql -u formUser1 -p
+
+CREATE DATABASE FormManager;
+
+
+CREATE TABLE user
+(
+  username        VARCHAR(150) NOT NULL,
+  password        VARCHAR(150) NOT NULL,
+  PRIMARY KEY     (username)
+);
+
+show tables;
+
+insert into user (username, password) values ('test', 'test');
+
+ CREATE USER 'formUser1'@'localhost' IDENTIFIED BY 'password';
+ GRANT ALL PRIVILEGES ON *.FormManager TO 'formUser1'@'localhost' WITH GRANT OPTION;
+ GRANT ALL PRIVILEGES ON *.auth_system TO 'formUser1'@'localhost' WITH GRANT OPTION;
+
+ update user set authentication_string=password(''), plugin='mysql_native_password' where user='root';
+
+ update user set authentication_string=password('password'), plugin='mysql_native_password' where user='formUser1';
+
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Lewisham123';
+ ALTER USER 'formUser1'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+ GRANT ALL PRIVILEGES ON auth_system.* TO 'formUser1'@'localhost';
+
+DEBUG=express-locallibrary-tutorial:* npm run devstart

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form
+   button(formaction="/homeConsole") Home
+  div
+   label Select Form:
+   select
+    option(value='form1') form1
+    option(value='form2') form2
+    option(value='form3') form3
